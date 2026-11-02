@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Ships
+  m_EditorClassIdentifier: Assembly-CSharp:GalaxyDataImporter:GalaxyShipsAsset
+  entries:
+  - id: 11
+    name: "\u0413\u0440\u043E\u043C"
+    category: 20
+    values:
+    - id: 11
+      value: 2200
+    - id: 12
+      value: 10
+    - id: 13
+      value: 12000
+    price_buy: 600
+    price_sale: 420
+    icon: ship
+    slot: 0
+    hasSlot: 0
+    prop2Number: 0
+    prop2IsArray: 0
+    prop2Strings: []
+    slots: 090000000900000009000000090000000b0000000b0000000d0000000d000000070000000c00000006000000
+    holds:
+    - name: "\u0422\u0440\u044E\u043C"
+      capacity: 5000
+  - id: 12
+    name: "\u0421\u043E\u043A\u043E\u043B"
+    category: 21
+    values:
+    - id: 11
+      value: 900
+    - id: 12
+      value: 22
+    - id: 13
+      value: 3200
+    price_buy: 450
+    price_sale: 320
+    icon: ship
+    slot: 0
+    hasSlot: 0
+    prop2Number: 0
+    prop2IsArray: 0
+    prop2Strings: []
+    slots: 09000000090000000b0000000b0000000d000000070000000c000000
+    holds:
+    - name: "\u0422\u0440\u044E\u043C 1"
+      capacity: 1000
+    - name: "\u0422\u0440\u044E\u043C 2"
+      capacity: 1000
+  - id: 13
+    name: "\u041E\u0441\u0430"
+    category: 22
+    values:
+    - id: 11
+      value: 620
+    - id: 12
+      value: 30
+    - id: 13
+      value: 1700
+    price_buy: 410
+    price_sale: 290
+    icon: ship
+    slot: 0
+    hasSlot: 0
+    prop2Number: 0
+    prop2IsArray: 0
+    prop2Strings: []
+    slots: 09000000090000000b0000000d000000070000000c000000
+    holds:
+    - name: "\u0422\u0440\u044E\u043C"
+      capacity: 1000
+  - id: 14
+    name: "\u0421\u0442\u0440\u0438\u0436"
+    category: 23
+    values:
+    - id: 11
+      value: 380
+    - id: 12
+      value: 48
+    - id: 13
+      value: 460
+    price_buy: 380
+    price_sale: 260
+    icon: ship
+    slot: 0
+    hasSlot: 0
+    prop2Number: 0
+    prop2IsArray: 0
+    prop2Strings: []
+    slots: 09000000090000000b000000070000000c000000
+    holds: []
+  - id: 15
+    name: "\u0427\u0435\u043B\u043D\u043E\u043A"
+    category: 24
+    values:
+    - id: 11
+      value: 260
+    - id: 12
+      value: 26
+    - id: 13
+      value: 320
+    price_buy: 350
+    price_sale: 240
+    icon: ship
+    slot: 0
+    hasSlot: 0
+    prop2Number: 0
+    prop2IsArray: 0
+    prop2Strings: []
+    slots: 0b0000000d000000070000000c000000
+    holds:
+    - name: "\u0422\u0440\u044E\u043C 1"
+      capacity: 1000
+    - name: "\u0422\u0440\u044E\u043C 2"
+      capacity: 1000
+  - id: 16
+    name: "\u0411\u0430\u0440\u0436\u0430"
+    category: 25
+    values:
+    - id: 11
+      value: 1400
+    - id: 12
+      value: 8
+    - id: 13
+      value: 7000
+    price_buy: 520
+    price_sale: 380
+    icon: ship
+    slot: 0
+    hasSlot: 0
+    prop2Number: 0
+    prop2IsArray: 0
+    prop2Strings: []
+    slots: 0b0000000d00000007000000070000000c00000008000000
+    holds:
+    - name: "\u0422\u0440\u044E\u043C 1"
+      capacity: 10000
+    - name: "\u0422\u0440\u044E\u043C 2"
+      capacity: 5000

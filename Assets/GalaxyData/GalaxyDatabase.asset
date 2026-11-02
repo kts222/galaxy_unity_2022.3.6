@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GalaxyDatabase
+  m_EditorClassIdentifier: Assembly-CSharp:GalaxyDataImporter:GalaxyDatabaseAsset
+  settings: {fileID: 11400000, guid: 7fe0e7bcd6c34e54c936c3741db1c053, type: 2}
+  icons: {fileID: 11400000, guid: 10aac10b5fac43545b663ce7afe14387, type: 2}
+  baseNames: {fileID: 11400000, guid: c1f32d47d421576468074dd94b770f1e, type: 2}
+  properties: {fileID: 11400000, guid: cbfb82b628c081044a7f6e12e50b5faa, type: 2}
+  slots: {fileID: 11400000, guid: 6b5dce9c94f39e84cb310895b035e081, type: 2}
+  resourceCategories: {fileID: 11400000, guid: 4b2dbf345f78f9c4f822622eaf703c14, type: 2}
+  equipmentCategories: {fileID: 11400000, guid: f1c5ec592325df145974689ee9aeb936, type: 2}
+  shipCategories: {fileID: 11400000, guid: 2463471884727734c87cf1401588838b, type: 2}
+  ships: {fileID: 11400000, guid: 944ac36c77e18bc4cbba2315bc962f48, type: 2}
+  resources: {fileID: 11400000, guid: 0ffdef7c7a6bece4d8c1c1ee3efa2ff2, type: 2}
+  equipments: {fileID: 11400000, guid: 4b953a625b9dc2448bdca56ab0fb8aac, type: 2}

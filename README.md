@@ -1,24 +1,49 @@
-# Galaxy Unity Data Importer
+# Galaxy Data Unity Importer
 
-Unity 2022.3.6 project tooling for importing the exported `galaxy-data.json` dataset into a ScriptableObject asset.
+Мини-проект/пакет для Unity Editor. Импортирует **только данные** из `galaxy-data.json` в ScriptableObject assets.
 
-## Usage
+## Использование
+1. Откройте проект в Unity 2022.3 LTS или новее.
+2. Поместите исходный JSON-файл в папку `Assets` проекта (например, `Assets/Import/galaxy-data.json`).
+3. Откройте `Tools → Galaxy Data → JSON Importer`.
+4. Выберите JSON в поле `JSON file`.
+5. Нажмите `Import JSON → ScriptableObjects`.
+6. Результат появится в `Assets/GalaxyData/`, главный asset — `GalaxyDatabase.asset`.
 
-1. Open this project in Unity 2022.3.6.
-2. In the Project window, select `Assets/GalaxyData/galaxy-data.json` (or another JSON TextAsset).
-3. Open **Tools → Galaxy → JSON to ScriptableObject**.
-4. Click **Create / Update Galaxy Data Asset**.
-5. The resulting asset is saved under `Assets/GalaxyData/Generated/GalaxyData.asset`.
+Повторный импорт обновляет уже созданные assets с теми же именами, а не создаёт новые копии.
 
-The generated asset stores the original JSON payload without dropping fields, including nested arrays, the icon SVG strings, and keys that Unity `JsonUtility` cannot directly map. Runtime consumers can access the preserved JSON via `GalaxyDataAsset.Json` and parse only the data they need.
+## Создаваемые assets
+- Settings
+- Icons
+- BaseNames
+- Properties
+- Slots
+- ResourceCategories
+- EquipmentCategories
+- ShipCategories
+- Ships
+- Resources
+- Equipments
+- GalaxyDatabase (ссылки на все перечисленные assets)
 
-## Scope
+## Использование из игрового кода
+```csharp
+using GalaxyDataImporter;
+using UnityEngine;
 
-Only the data contained in the source JSON is imported. No gameplay systems, UI, networking, or unrelated data are included.
+public class Example : MonoBehaviour
+{
+    [SerializeField] private GalaxyDatabaseAsset database;
 
-## Project layout
+    private void Start()
+    {
+        foreach (var ship in database.ships.entries)
+            Debug.Log($"{ship.name}: buy={ship.price_buy}");
+    }
+}
+```
 
-- `Assets/GalaxyData/galaxy-data.json` — source dataset
-- `Assets/GalaxyData/Scripts/GalaxyDataAsset.cs` — ScriptableObject container
-- `Assets/GalaxyData/Editor/GalaxyDataImporterWindow.cs` — Editor import window
-
+## Важно
+- Импортёр использует пакет Unity `com.unity.nuget.newtonsoft-json` для корректного чтения словаря `icons`, nullable `slot` и поля `prop2`, которое в исходном JSON бывает числом или массивом.
+- `prop2` сохранён как `JToken`-совместимое значение? Для строгого использования рекомендуется смотреть исходное поле `prop2` как `object`; JSON.NET сохранит фактический тип значения при десериализации.
+- Импортёр не создаёт UI, сцены, префабы, игровые механики или инвентарь.
